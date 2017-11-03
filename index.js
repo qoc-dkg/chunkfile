@@ -28,7 +28,7 @@
   */
   function chunkFile(file, chunkSize, useMegabyte) {
     if (chunkSize && useMegabyte) {
-      chunkSize = mbtob(chunkSize);
+      chunkSize = mtob(chunkSize);
     }
     chunkSize = chunkSize || defaultChunkSize;
     var size = file.size;
@@ -49,7 +49,7 @@
   * @param {Number} mb - megabytes to convert
   * @returns {Number}
   */
-  function mbtob(mb) {
+  function mtob(mb) {
     return mb * defaultChunkSize;
   }
 })()
