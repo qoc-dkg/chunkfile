@@ -27,7 +27,7 @@
   function chunkFile(file, chunkSize) {
     chunkSize = chunkSize || defaultChunkSize;
     var size = file.size;
-    var numChunks = Math.max(Math.ceil(size / chunkSize));
+    var numChunks = Math.max(Math.ceil(size / chunkSize), 1);
     var start = 0;
     var end = chunkSize;
     var chunks = [];
