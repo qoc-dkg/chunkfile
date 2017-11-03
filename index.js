@@ -10,8 +10,8 @@
   if (typeof exports === "object" && exports &&
     typeof module === "object" && module && module.exports === exports) {
     module.exports = chunkFile;
-  } else if (jQuery) {
-    jQuery.fn.chunkFile = chunkFile;
+  } else if (window.jQuery) {
+    window.jQuery.fn.chunkFile = chunkFile;
   } else {
     window.chunkFile = chunkFile;
   }

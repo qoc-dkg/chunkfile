@@ -1,3 +1,3 @@
-import chunkFile from './index'
+import chunkFile from '../index'
 
 console.log(chunkFile)
