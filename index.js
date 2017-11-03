@@ -22,9 +22,14 @@
   * Given a file object and a chunksize, return an array of file chunks
   *
   * @param {File} file - File to be chunked
-  * @param {Number} chunkSize - max size of chunks in bytes
+  * @param {Number} chunkSize - max size of chunks in bytes or megabytes
+  * @param {Boolean} useMegabyte - flag whether to interpret size as mb
+  * @returns {Array}
   */
-  function chunkFile(file, chunkSize) {
+  function chunkFile(file, chunkSize, useMegabyte) {
+    if (chunkSize && useMegabyte) {
+      chunkSize = mbtob(chunkSize);
+    }
     chunkSize = chunkSize || defaultChunkSize;
     var size = file.size;
     var numChunks = Math.max(Math.ceil(size / chunkSize), 1);
@@ -37,5 +42,14 @@
       end = start + chunkSize;
     }
     return chunks;
+  }
+  /**
+  * convert mb to bytes for a friendlier interface
+  *
+  * @param {Number} mb - megabytes to convert
+  * @returns {Number}
+  */
+  function mbtob(mb) {
+    return mb * defaultChunkSize;
   }
 })()
