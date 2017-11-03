@@ -1,0 +1,35 @@
+{
+  "name": "chunkfile",
+  "version": "1.0.0",
+  "description": "chunk a file by specified size",
+  "main": "index.js",
+  "scripts": {
+    "test": "open test/index.html",
+    "test-node": "./node_modules/babel-cli/bin/babel-node.js test/nodetest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qoc-dkg/chunkfile.git"
+  },
+  "keywords": [
+    "chunk",
+    "file",
+    "campbells",
+    "chunky",
+    "soup"
+  ],
+  "author": "dkg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qoc-dkg/chunkfile/issues"
+  },
+  "homepage": "https://github.com/qoc-dkg/chunkfile#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
